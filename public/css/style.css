@@ -21,8 +21,30 @@
 }
 
 .jumbotron .display-4 {
+  margin-top: 480px;
   color: white;
-  margin-top: 150px;
   font-weight: 200;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
+}
+
+.jumbotron .lead {
+  color: white;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+}
+
+.btn {
+  background-color: #00a7a3;
+  color: white;
+}
+
+.btn1 {
+  background-color: white;
+  font-size: 15px;
+  color: #00a7a3;
+  border: 2px solid #00a7a3;
+  border-radius: 4px;
+}
+
+.txt {
+  color: #00a7a3;
 }

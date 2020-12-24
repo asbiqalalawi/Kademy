@@ -10,6 +10,15 @@ class Home extends BaseController
 		return view('user/homepage', $data);
 	}
 
-	//--------------------------------------------------------------------
+	public function login()
+	{
+		$data['title'] = "Masuk | Kademy";
+		return view('login', $data);
+	}
 
+	public function register()
+	{
+		$data['title'] = "Daftar | Kademy";
+		return view('register', $data);
+	}
 }
