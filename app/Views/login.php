@@ -35,7 +35,7 @@
                         <small><a href="" class="txt">Lupa Kata Sandi?</a></small>
                     </div>
                     <div class="text-center mt-3">
-                        <button type="submit" class="btn btn-m" style="padding: 5px 140px;">Masuk</button>
+                        <button type="submit" class="btn" style="padding: 5px 140px;">Masuk</button>
                     </div>
                 </form>
                 <div class="text-center">

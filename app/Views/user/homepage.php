@@ -72,6 +72,7 @@
                         <img src="/img/danial-unsplash.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Card title</h5>
+                            <h6 class="hrg">Rp. 200.000</h6>
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                             <a href="#" class="btn">Go somewhere</a>
                         </div>
@@ -80,6 +81,7 @@
                         <img src="/img/danial-unsplash.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Card title</h5>
+                            <h6 class="hrg">Rp. 200.000</h6>
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                             <a href="#" class="btn">Go somewhere</a>
                         </div>
@@ -88,6 +90,7 @@
                         <img src="/img/danial-unsplash.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Card title</h5>
+                            <h6 class="hrg">Rp. 200.000</h6>
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                             <a href="#" class="btn">Go somewhere</a>
                         </div>
@@ -96,6 +99,7 @@
                         <img src="/img/danial-unsplash.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Card title</h5>
+                            <h6 class="hrg">Rp. 200.000</h6>
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                             <a href="#" class="btn">Go somewhere</a>
                         </div>
@@ -104,6 +108,7 @@
                         <img src="/img/danial-unsplash.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Card title</h5>
+                            <h6 class="hrg">Rp. 200.000</h6>
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                             <a href="#" class="btn">Go somewhere</a>
                         </div>
@@ -112,6 +117,7 @@
                         <img src="/img/danial-unsplash.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Card title</h5>
+                            <h6 class="hrg">Rp. 200.000</h6>
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                             <a href="#" class="btn">Go somewhere</a>
                         </div>
@@ -120,6 +126,7 @@
                         <img src="/img/danial-unsplash.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Card title</h5>
+                            <h6 class="hrg">Rp. 200.000</h6>
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                             <a href="#" class="btn">Go somewhere</a>
                         </div>
@@ -128,6 +135,7 @@
                         <img src="/img/danial-unsplash.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Card title</h5>
+                            <h6 class="hrg">Rp. 200.000</h6>
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                             <a href="#" class="btn">Go somewhere</a>
                         </div>
@@ -138,13 +146,15 @@
         </div>
     </div>
 
-    <hr>
-    <footer class="text-center">
-        <div class="container">
-            <div class="row">
-                <p>Copyright © 2020 - Kademy. All rights reserved.</p>
+    <div class="footer">
+        <hr>
+        <footer class="text-center">
+            <div class="container">
+                <div class="row">
+                    <p>Copyright © 2020 - Kademy. All rights reserved.</p>
+                </div>
             </div>
-        </div>
-    </footer>
+        </footer>
+    </div>
 
     <?= $this->endSection(); ?>
