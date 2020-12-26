@@ -22,3 +22,11 @@
 .footer {
   margin-top: 28%;
 }
+
+.progress-bar {
+  background-color: #00a7a3;
+}
+
+.table > tbody > tr > * {
+  vertical-align: middle;
+}

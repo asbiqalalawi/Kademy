@@ -16,9 +16,13 @@ class User extends BaseController
 		return view('user/classdetail', $data);
 	}
 
+	public function dashboard()
+	{
+		$data['title'] = "Kademy";
+		return view('user/dashboard', $data);
+	}
+
 	public function keranjang()
 	{
-		$data['title'] = "Keranjang | Kademy";
-		return view('user/keranjang', $data);
 	}
 }

@@ -43,7 +43,7 @@
     <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light">
         <div class="container-fluid mx-5">
             <a class="navbar-brand" href="#">
-                <img src="favicon.ico" width="30" height="30" alt="" loading="lazy">
+                <img src="/img/logo.png" width="30" height="30" alt="" loading="lazy">
             </a>
             <a class="navbar-brand" href="#">Kademy</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
