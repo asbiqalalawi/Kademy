@@ -1,6 +1,41 @@
 <?= $this->extend('layouts/template'); ?>
 
 <?= $this->section('content'); ?>
+<style>
+    .jumbotron {
+        background-image: url(/img/akson-unsplash.jpg);
+        background-size: cover;
+        height: 740px;
+        position: relative;
+    }
+
+    .jumbotron::after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+        position: absolute;
+        bottom: 0;
+    }
+
+    .jumbotron .container {
+        z-index: 1;
+        position: relative;
+    }
+
+    .jumbotron .display-4 {
+        margin-top: 480px;
+        color: white;
+        font-weight: 200;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
+    }
+
+    .jumbotron .lead {
+        color: white;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+    }
+</style>
 </head>
 
 <body>

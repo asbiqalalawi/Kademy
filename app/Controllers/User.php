@@ -10,6 +10,12 @@ class User extends BaseController
 		return view('user/homepage', $data);
 	}
 
+	public function detail()
+	{
+		$data['title'] = "Detail Kelas | Kademy"; //Nama kelas
+		return view('user/classdetail', $data);
+	}
+
 	public function keranjang()
 	{
 		$data['title'] = "Keranjang | Kademy";
