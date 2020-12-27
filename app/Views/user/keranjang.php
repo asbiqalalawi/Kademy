@@ -77,7 +77,7 @@
                             <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
                             <div class="row">
                                 <div class="col-2">
-                                    <img src="/img/danial-unsplash.jpg" width="120px">
+                                    <img src="/img/danial-unsplash.jpg" width="100%">
                                 </div>
                                 <div class="col">
                                     <h5 class="card-text">Pengantar Java</h5>
@@ -91,7 +91,7 @@
                             <input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
                             <div class="row">
                                 <div class="col-2">
-                                    <img src="/img/danial-unsplash.jpg" width="120px">
+                                    <img src="/img/danial-unsplash.jpg" width="100%">
                                 </div>
                                 <div class="col">
                                     <h5 class="card-text">Pengantar Java</h5>
@@ -105,7 +105,7 @@
                             <input class="form-check-input" type="checkbox" value="" id="defaultCheck3">
                             <div class="row">
                                 <div class="col-2">
-                                    <img src="/img/danial-unsplash.jpg" width="120px">
+                                    <img src="/img/danial-unsplash.jpg" width="100%">
                                 </div>
                                 <div class="col">
                                     <h5 class="card-text">Pengantar Java</h5>
