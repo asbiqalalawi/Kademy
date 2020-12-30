@@ -6,17 +6,18 @@
 <body>
     <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light">
         <div class="container-fluid mx-5">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="/">
                 <img src="/img/logo.png" width="30" height="30" alt="" loading="lazy">
             </a>
-            <a class="navbar-brand" href="#">Kademy</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <a class="navbar-brand" href="/">Kademy</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse mx-5" id="navbarNav">
                 <ul class="navbar-nav ">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <a class="nav-link active" aria-current="page" href="/">Home</a>
                     </li>
                 </ul>
                 <ul class="navbar-nav ml-auto">

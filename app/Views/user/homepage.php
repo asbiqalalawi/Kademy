@@ -7,29 +7,38 @@
 
     <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light">
         <div class="container-fluid mx-5">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="/">
                 <img src="favicon.ico" width="30" height="30" alt="" loading="lazy">
             </a>
-            <a class="navbar-brand" href="#">Kademy</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <a class="navbar-brand" href="/">Kademy</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse mx-5" id="navbarNav">
                 <ul class="navbar-nav ">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <a class="nav-link active" aria-current="page" href="/">Home</a>
                     </li>
                 </ul>
                 <ul class="navbar-nav ml-auto">
                     <li class=" nav-item mr-4 mt-2">
-                        <i class="fas fa-shopping-cart"></i>
+                        <a href="keranjang">
+                            <i class="fas fa-shopping-cart"></i>
+                        </a>
                     </li>
+
                     <li class=" nav-item mr-3">
-                        <button type="button" class="btn btn1">Masuk</button>
+                        <a href="login">
+                            <button type="button" class="btn btn1">Masuk</button>
+                        </a>
                     </li>
                     <li class="nav-item">
-                        <button type="button" class="btn">Daftar</button>
+                        <a href="register">
+                            <button type="button" class="btn">Daftar</button>
+                        </a>
                     </li>
+
                 </ul>
             </div>
         </div>
@@ -61,7 +70,8 @@
                     <div class="card-body">
                         <h5 class="card-title">Cari</h5>
                         <form class="form-inline my-2 my-lg-0">
-                            <input class="form-control mr-sm-2" type="search" placeholder="Cari Kelas" aria-label="Search">
+                            <input class="form-control mr-sm-2" type="search" placeholder="Cari Kelas"
+                                aria-label="Search">
                         </form>
                     </div>
                 </div>
@@ -73,7 +83,8 @@
                         <div class="card-body">
                             <h5 class="card-title">Card title</h5>
                             <h6 class="hrg">Rp. 200.000</h6>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of the card's content.</p>
                             <a href="#" class="btn">Go somewhere</a>
                         </div>
                     </div>
@@ -82,7 +93,8 @@
                         <div class="card-body">
                             <h5 class="card-title">Card title</h5>
                             <h6 class="hrg">Rp. 200.000</h6>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of the card's content.</p>
                             <a href="#" class="btn">Go somewhere</a>
                         </div>
                     </div>
@@ -91,7 +103,8 @@
                         <div class="card-body">
                             <h5 class="card-title">Card title</h5>
                             <h6 class="hrg">Rp. 200.000</h6>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of the card's content.</p>
                             <a href="#" class="btn">Go somewhere</a>
                         </div>
                     </div>
@@ -100,7 +113,8 @@
                         <div class="card-body">
                             <h5 class="card-title">Card title</h5>
                             <h6 class="hrg">Rp. 200.000</h6>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of the card's content.</p>
                             <a href="#" class="btn">Go somewhere</a>
                         </div>
                     </div>
@@ -109,7 +123,8 @@
                         <div class="card-body">
                             <h5 class="card-title">Card title</h5>
                             <h6 class="hrg">Rp. 200.000</h6>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of the card's content.</p>
                             <a href="#" class="btn">Go somewhere</a>
                         </div>
                     </div>
@@ -118,7 +133,8 @@
                         <div class="card-body">
                             <h5 class="card-title">Card title</h5>
                             <h6 class="hrg">Rp. 200.000</h6>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of the card's content.</p>
                             <a href="#" class="btn">Go somewhere</a>
                         </div>
                     </div>
@@ -127,7 +143,8 @@
                         <div class="card-body">
                             <h5 class="card-title">Card title</h5>
                             <h6 class="hrg">Rp. 200.000</h6>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of the card's content.</p>
                             <a href="#" class="btn">Go somewhere</a>
                         </div>
                     </div>
@@ -136,7 +153,8 @@
                         <div class="card-body">
                             <h5 class="card-title">Card title</h5>
                             <h6 class="hrg">Rp. 200.000</h6>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of the card's content.</p>
                             <a href="#" class="btn">Go somewhere</a>
                         </div>
                     </div>
