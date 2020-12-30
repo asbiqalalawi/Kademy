@@ -16,7 +16,7 @@ class Register extends BaseController{
     public function save() {
         helper(['form']);
         $rules = [
-            'email'         => ['required|trim|is_unique[user.email]'],
+            'email'         => 'required|trim|is_unique[user.email]',
             'password'      => 'required',
             'confirm_password'  => 'required|matches[password]'
         ];
