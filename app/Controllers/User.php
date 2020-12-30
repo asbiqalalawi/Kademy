@@ -37,9 +37,6 @@ class User extends BaseController
 		$data['title'] = "Keranjang | Kademy";
 		return view('user/keranjang', $data, $dataUser);
 	}
-<<<<<<< HEAD
-}
-=======
 
 	public function kelas()
 	{
@@ -47,4 +44,3 @@ class User extends BaseController
 		return view('user/kelas', $data);
 	}
 }
->>>>>>> 5d9fb972a0e99ef36954a1dcfef38413348dc839

@@ -2,39 +2,39 @@
 
 <?= $this->section('content'); ?>
 <style>
-    .jumbotron {
-        background-image: url(/img/akson-unsplash.jpg);
-        background-size: cover;
-        height: 740px;
-        position: relative;
-    }
+.jumbotron {
+    background-image: url(/img/akson-unsplash.jpg);
+    background-size: cover;
+    height: 740px;
+    position: relative;
+}
 
-    .jumbotron::after {
-        content: "";
-        display: block;
-        width: 100%;
-        height: 100%;
-        background-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
-        position: absolute;
-        bottom: 0;
-    }
+.jumbotron::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+    position: absolute;
+    bottom: 0;
+}
 
-    .jumbotron .container {
-        z-index: 1;
-        position: relative;
-    }
+.jumbotron .container {
+    z-index: 1;
+    position: relative;
+}
 
-    .jumbotron .display-4 {
-        margin-top: 480px;
-        color: white;
-        font-weight: 200;
-        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
-    }
+.jumbotron .display-4 {
+    margin-top: 480px;
+    color: white;
+    font-weight: 200;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
+}
 
-    .jumbotron .lead {
-        color: white;
-        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
-    }
+.jumbotron .lead {
+    color: white;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+}
 </style>
 </head>
 
@@ -42,13 +42,8 @@
 
     <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light">
         <div class="container-fluid mx-5">
-<<<<<<< HEAD
             <a class="navbar-brand" href="/">
                 <img src="favicon.ico" width="30" height="30" alt="" loading="lazy">
-=======
-            <a class="navbar-brand" href="#">
-                <img src="/img/logo.png" width="30" height="30" alt="" loading="lazy">
->>>>>>> 5d9fb972a0e99ef36954a1dcfef38413348dc839
             </a>
             <a class="navbar-brand" href="/">Kademy</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"

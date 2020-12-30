@@ -5,36 +5,40 @@ use App\Models\UserModel;
 
 class Register extends BaseController{
     
+    public function __construct()
+    {
+        helper('form');
+        $this->form_validation = \Config\Services::validation();
+    }
+
     public function index()
     {
-        helper(['form']);
         $data['title'] = "Daftar | Kademy";
         $dataUser = [];
         return view('register', $data, $dataUser);
     }
 
     public function save() {
-        helper(['form']);
         $rules = [
             'email'         => 'required|trim|is_unique[user.email]',
-            'password'      => 'required',
+            'password'      => 'required|min_length[8]|max_length[20]',
             'confirm_password'  => 'required|matches[password]'
         ];
-
+    
         if($this->validate($rules)) {
             $model = new UserModel();
             $dataUser = [
                 'email'     => $this->request->getVar('email'),
-                'level'     => '1',
+                'role_id'     => '1',
                 'password'  => password_hash($this->request->getVar('password'), PASSWORD_DEFAULT)
             ];
             $model->save($dataUser);
-            return redirect()->to('/');
+            return redirect()->to('/login');
         }
         
         else {
             $dataUser['validation'] = $this->validator;
-            echo view('register', $dataUser);
+            echo view('/register', $dataUser);
         }
 
     }

@@ -31,7 +31,7 @@
                         <form class="m-3" action="/register/save" method="POST">
                             <div class="text-center mb-4">
                                 <h4>Daftar Sekarang</h4>
-                                <small class="form-text text-muted">Sudah punya akun Kademy? <a href="login"
+                                <small class="form-text text-muted">Sudah punya akun Kademy? <a href="/login"
                                         class="txt">Masuk</a></small>
                             </div>
                             <div class="form-group">

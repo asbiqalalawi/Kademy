@@ -20,6 +20,9 @@ body {
         </div>
         <div class="card bg-light mb-3 mx-auto shadow" style="max-width: 400px;">
             <div class="card-body">
+                <?php if(session()->getFlashdata('msg')):?>
+                <div class="alert alert-danger"><?= session()->getFlashdata('msg') ?></div>
+                <?php endif;?>
                 <?php if(isset($validation)):?>
                 <div class="alert alert-danger"><?= $validation->listErrors() ?></div>
                 <?php endif;?>
@@ -43,7 +46,7 @@ body {
                     </div>
                 </form>
                 <div class="text-center">
-                    <small>Belum punya akun Kademy? <a href="register" class="txt">Daftar</a></small>
+                    <small>Belum punya akun Kademy? <a href="/register" class="txt">Daftar</a></small>
                 </div>
             </div>
         </div>
