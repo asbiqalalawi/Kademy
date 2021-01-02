@@ -25,19 +25,17 @@
             <div class="col">
                 <div class="card bg-light mb-3 mx-auto shadow" style="max-width: 400px;">
                     <div class="card-body">
-                        <?php if(isset($validation)):?>
-                        <div class="alert alert-danger"><?= $validation->listErrors() ?></div>
-                        <?php endif;?>
+                        <?php if (isset($validation)) : ?>
+                            <div class="alert alert-danger"><?= $validation->listErrors() ?></div>
+                        <?php endif; ?>
                         <form class="m-3" action="/register/save" method="POST">
                             <div class="text-center mb-4">
                                 <h4>Daftar Sekarang</h4>
-                                <small class="form-text text-muted">Sudah punya akun Kademy? <a href="/login"
-                                        class="txt">Masuk</a></small>
+                                <small class="form-text text-muted">Sudah punya akun Kademy? <a href="/login" class="txt">Masuk</a></small>
                             </div>
                             <div class="form-group">
                                 <small id="emailHelp" class="form-text text-muted">Email</small>
-                                <input type="email" class="form-control" id="email" name="email"
-                                    aria-describedby="emailHelp">
+                                <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp">
                                 <small id="emailHelp" class="form-text text-muted">Contoh : email@kademy.com</small>
                             </div>
                             <div class="form-group">
@@ -46,8 +44,7 @@
                             </div>
                             <div class="form-group">
                                 <small id="passwordHelp" class="form-text text-muted">Ulangi Password</small>
-                                <input type="password" class="form-control" id="password repeat"
-                                    name="confirm_password">
+                                <input type="password" class="form-control" id="password repeat" name="confirm_password">
                             </div>
                             <div class="text-center mt-4">
                                 <button type="submit" class="btn btn-m" style="padding: 5px 140px;">Daftar</button>
