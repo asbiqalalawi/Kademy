@@ -38,6 +38,7 @@ $routes->get('/detail', 'User::detail');
 $routes->get('/dashboard', 'User::dashboard');
 $routes->get('/keranjang', 'User::keranjang');
 $routes->get('/kelas', 'User::kelas');
+$routes->get('/bayar', 'User::bayar');
 
 $routes->get('/login', 'Login::index');
 $routes->get('/logout', 'Login::logout');

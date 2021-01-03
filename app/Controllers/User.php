@@ -1,17 +1,18 @@
 <?php
 
 namespace App\Controllers;
+
 use App\Models\UserModel2;
 use CodeIgniter\Controllers;
 
 
 class User extends BaseController
 {
-	public function __construct() 
-    {
-        $session = session();
-        $this->user = new UserModel2();
-    }
+	public function __construct()
+	{
+		$session = session();
+		$this->user = new UserModel2();
+	}
 	public function index()
 	{
 		$dataUser['user'] = $this->user->getUser();
@@ -42,5 +43,11 @@ class User extends BaseController
 	{
 		$data['title'] = "Nama Kelas | Kademy";
 		return view('user/kelas', $data);
+	}
+
+	public function bayar()
+	{
+		$data['title'] = "Pembayaran | Kademy";
+		return view('user/bayar', $data);
 	}
 }
