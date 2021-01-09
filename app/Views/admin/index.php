@@ -164,57 +164,54 @@
         <ul class="navigation-menu">
             <li class="nav-category-divider">MAIN</li>
             <li>
-                <a href="index.html">
+                <a href="/admin">
                     <span class="link-title">Dashboard</span>
                     <i class="mdi mdi-gauge link-icon"></i>
                 </a>
             </li>
             <li>
                 <a href="#sample-pages" data-toggle="collapse" aria-expanded="false">
-                    <span class="link-title">Sample Pages</span>
+                    <span class="link-title">Course</span>
                     <i class="mdi mdi-flask link-icon"></i>
                 </a>
                 <ul class="collapse navigation-submenu" id="sample-pages">
                     <li>
-                        <a href="pages/sample-pages/login_1.html" target="_blank">Login</a>
+                        <a href="pages/sample-pages/login_1.html" target="_blank">Android</a>
                     </li>
                     <li>
-                        <a href="pages/sample-pages/error_2.html" target="_blank">Error</a>
+                        <a href="pages/sample-pages/error_2.html" target="_blank">Web</a>
                     </li>
                 </ul>
             </li>
             <li>
                 <a href="#ui-elements" data-toggle="collapse" aria-expanded="false">
-                    <span class="link-title">UI Elements</span>
+                    <span class="link-title">Materi</span>
                     <i class="mdi mdi-bullseye link-icon"></i>
                 </a>
                 <ul class="collapse navigation-submenu" id="ui-elements">
                     <li>
-                        <a href="pages/ui-components/buttons.html">Buttons</a>
+                        <a href="/tambahmateri">Tambah Materi</a>
                     </li>
                     <li>
-                        <a href="pages/ui-components/tables.html">Tables</a>
-                    </li>
-                    <li>
-                        <a href="pages/ui-components/typography.html">Typography</a>
+                        <a href="/lihatmateri">Lihat Materi</a>
                     </li>
                 </ul>
             </li>
             <li>
                 <a href="pages/forms/form-elements.html">
-                    <span class="link-title">Forms</span>
+                    <span class="link-title">Riwayat Pembayaran</span>
                     <i class="mdi mdi-clipboard-outline link-icon"></i>
                 </a>
             </li>
             <li>
                 <a href="pages/charts/chartjs.html">
-                    <span class="link-title">Charts</span>
+                    <span class="link-title">Tambah Guru</span>
                     <i class="mdi mdi-chart-donut link-icon"></i>
                 </a>
             </li>
             <li>
                 <a href="pages/icons/material-icons.html">
-                    <span class="link-title">Icons</span>
+                    <span class="link-title">Tambah Siswa</span>
                     <i class="mdi mdi-flower-tulip-outline link-icon"></i>
                 </a>
             </li>

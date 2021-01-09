@@ -106,7 +106,7 @@
     <footer class="text-center">
         <div class="container">
             <div class="row">
-                <p>Copyright © 2020 - Kademy. All rights reserved.</p>
+                <p>Copyright © 2021 - Kademy. All rights reserved.</p>
             </div>
         </div>
     </footer>

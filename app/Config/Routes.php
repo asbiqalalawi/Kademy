@@ -33,6 +33,8 @@ $routes->setAutoRoute(true);
 // route since we don't have to scan directories.
 $routes->get('/', 'User::index');
 $routes->get('admin', 'Admin::index');
+$routes->get('/tambahmateri', 'Admin::tambahmateri');
+$routes->get('/lihatmateri', 'Admin::lihatmateri');
 
 $routes->get('/detail', 'User::detail');
 $routes->get('/dashboard', 'User::dashboard');

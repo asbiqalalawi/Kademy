@@ -1,10 +1,13 @@
-<?php namespace App\Controllers;
+<?php
+
+namespace App\Controllers;
 
 use CodeIgniter\Controller;
 use App\Models\UserModel;
 
-class Register extends BaseController{
-    
+class Register extends BaseController
+{
+
     public function __construct()
     {
         helper('form');
@@ -18,14 +21,15 @@ class Register extends BaseController{
         return view('register', $data, $dataUser);
     }
 
-    public function save() {
+    public function save()
+    {
         $rules = [
             'email'         => 'required|trim|is_unique[user.email]',
-            'password'      => 'required|min_length[8]|max_length[20]',
+            'password'      => 'required|min_length[3]|max_length[20]',
             'confirm_password'  => 'required|matches[password]'
         ];
-    
-        if($this->validate($rules)) {
+
+        if ($this->validate($rules)) {
             $model = new UserModel();
             $dataUser = [
                 'email'     => $this->request->getVar('email'),
@@ -34,12 +38,9 @@ class Register extends BaseController{
             ];
             $model->save($dataUser);
             return redirect()->to('/login');
-        }
-        
-        else {
+        } else {
             $dataUser['validation'] = $this->validator;
             echo view('/register', $dataUser);
         }
-
     }
 }
