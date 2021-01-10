@@ -47,7 +47,7 @@ class Admin extends BaseController
 
     public function editmateri($id)
     {
-        $model = new MateriModel();
+        $model = new MateriModel;
         $getMateri = $model->getMateri($id)->getRow();
         if (isset($getMateri)) {
             $data['materi'] = $getMateri;
