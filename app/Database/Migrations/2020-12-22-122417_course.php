@@ -2,6 +2,8 @@
 
 use CodeIgniter\Database\Migration;
 
+use function PHPSTORM_META\type;
+
 class Course extends Migration
 {
 	public function up()
@@ -17,7 +19,15 @@ class Course extends Migration
 				'type'           => 'VARCHAR',
 				'constraint'     => '255'
 			],
+			'price'				=> [
+				'type'			 => 'INT',
+				'constraint'	 => '255'
+			],
 			'name'       => [
+				'type'           => 'VARCHAR',
+				'constraint'     => '255'
+			],
+			'slug'       => [
 				'type'           => 'VARCHAR',
 				'constraint'     => '255'
 			],

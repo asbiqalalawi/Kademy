@@ -2,39 +2,39 @@
 
 <?= $this->section('style'); ?>
 <style>
-    .jumbotron {
-        background-image: url(/img/akson-unsplash.jpg);
-        background-size: cover;
-        height: 740px;
-        position: relative;
-    }
+.jumbotron {
+    background-image: url(/img/akson-unsplash.jpg);
+    background-size: cover;
+    height: 740px;
+    position: relative;
+}
 
-    .jumbotron::after {
-        content: "";
-        display: block;
-        width: 100%;
-        height: 100%;
-        background-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
-        position: absolute;
-        bottom: 0;
-    }
+.jumbotron::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+    position: absolute;
+    bottom: 0;
+}
 
-    .jumbotron .container {
-        z-index: 1;
-        position: relative;
-    }
+.jumbotron .container {
+    z-index: 1;
+    position: relative;
+}
 
-    .jumbotron .display-4 {
-        margin-top: 480px;
-        color: white;
-        font-weight: 200;
-        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
-    }
+.jumbotron .display-4 {
+    margin-top: 480px;
+    color: white;
+    font-weight: 200;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
+}
 
-    .jumbotron .lead {
-        color: white;
-        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
-    }
+.jumbotron .lead {
+    color: white;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+}
 </style>
 <?= $this->endSection(); ?>
 
@@ -74,86 +74,20 @@
         </div>
         <div class="col">
             <div class="row">
+
+                <?php foreach($course as $data) { ?>
+
                 <div class="card shadow mx-3 mb-3" style="width: 23rem;">
                     <img src="/img/danial-unsplash.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <h6 class="hrg">Rp. 200.000</h6>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                            of the card's content.</p>
-                        <a href="/detail" class="btn">Go somewhere</a>
+                        <h5 class="card-title"><?php echo $data['name']; ?></h5>
+                        <h6 class="hrg">Rp. <?php echo number_format($data['price'], 0, 0, '.'); ?></h6>
+                        <p class="card-text"><?php echo $data['description']; ?></p>
+                        <a href="<?= base_url('kursus/'.$data['slug']) ?>" class="btn">Lihat Kelas</a>
+
                     </div>
                 </div>
-                <div class="card shadow mx-3 mb-3" style="width: 23rem;">
-                    <img src="/img/danial-unsplash.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <h6 class="hrg">Rp. 200.000</h6>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                            of the card's content.</p>
-                        <a href="/detail" class="btn">Go somewhere</a>
-                    </div>
-                </div>
-                <div class="card shadow mx-3 mb-3" style="width: 23rem;">
-                    <img src="/img/danial-unsplash.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <h6 class="hrg">Rp. 200.000</h6>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                            of the card's content.</p>
-                        <a href="/detail" class="btn">Go somewhere</a>
-                    </div>
-                </div>
-                <div class="card shadow mx-3 mb-3" style="width: 23rem;">
-                    <img src="/img/danial-unsplash.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <h6 class="hrg">Rp. 200.000</h6>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                            of the card's content.</p>
-                        <a href="/detail" class="btn">Go somewhere</a>
-                    </div>
-                </div>
-                <div class="card shadow mx-3 mb-3" style="width: 23rem;">
-                    <img src="/img/danial-unsplash.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <h6 class="hrg">Rp. 200.000</h6>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                            of the card's content.</p>
-                        <a href="#" class="btn">Go somewhere</a>
-                    </div>
-                </div>
-                <div class="card shadow mx-3 mb-3" style="width: 23rem;">
-                    <img src="/img/danial-unsplash.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <h6 class="hrg">Rp. 200.000</h6>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                            of the card's content.</p>
-                        <a href="/detail" class="btn">Go somewhere</a>
-                    </div>
-                </div>
-                <div class="card shadow mx-3 mb-3" style="width: 23rem;">
-                    <img src="/img/danial-unsplash.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <h6 class="hrg">Rp. 200.000</h6>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                            of the card's content.</p>
-                        <a href="#" class="btn">Go somewhere</a>
-                    </div>
-                </div>
-                <div class="card shadow mx-3 mb-3" style="width: 23rem;">
-                    <img src="/img/danial-unsplash.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <h6 class="hrg">Rp. 200.000</h6>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                            of the card's content.</p>
-                        <a href="/detail" class="btn">Go somewhere</a>
-                    </div>
-                </div>
+                <?php } ?>
             </div>
 
         </div>
