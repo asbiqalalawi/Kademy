@@ -6,7 +6,7 @@ class UserModel2 extends Model {
     protected $table = "user";
 
     public function getUser($id = false) {
-        if ($id == false) {
+        if ($id === false) {
             return $this->table('user')
                         ->get()
                         ->getResultArray();

@@ -2,9 +2,10 @@
 
 namespace App\Controllers;
 
+use App\Models\CartModel;
 use App\Models\CourseModel;
 use App\Models\CourseModel2;
-use App\Models\UserModel2;
+use App\Models\UserModel;
 use CodeIgniter\Controllers;
 use Wildanfuady\WFcart\WFcart;
 
@@ -14,9 +15,10 @@ class User extends BaseController
 	public function __construct()
 	{
 		$session = session();
-		$this->user = new UserModel2();
+		$this->user = new UserModel();
 		$this->course = new CourseModel();
-		$this->kursus = new CourseModel2();
+        $this->kursus = new CourseModel2();
+        $this->cart = new CartModel();
 
 		// membuat variabel untuk menampung class WFcart
         $this->keranjang = new WFcart();
@@ -38,32 +40,9 @@ class User extends BaseController
 
 	//fungsi checkout batas atas
 	
-    public function beli($id = null)
+    public function beli($slug = null)
     {
-        // cari product berdasarkan id
-        $kursus = $this->kursus->viewCourse($id);
-        // cek data product
-        if($kursus != null){ // jika product tidak kosong
- 
-            // buat variabel array untuk menampung data product
-            $data = [
-                'id'        => $kursus['id'],
-                'name'      => $kursus['name'],
-                'price'     => $kursus['price'],
-                'slug'      => $kursus['slug'],
-                'quantity'  => 1
-            ];
-            // tambahkan product ke dalam cart
-            $this->keranjang->add_cart($id, $data);
-            // tampilkan nama product yang ditambahkan
-            $kursus = $data['name'];
-            // success flashdata
-            session()->setFlashdata('success', "Berhasil memasukan {$kursus} ke karanjang belanja");
-        } else {
-            // error flashdata
-            session()->setFlashdata('error', "Tidak dapat menemukan data product");
-        }
-        return redirect()->to('/');
+        return redirect()->to(base_url('/')); 
     }
  
     // function untuk update cart berdasarkan id dan quantity

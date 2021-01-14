@@ -31,6 +31,9 @@
                     <h5 class="card-title">Daftar Transaksi</h5>
                     <p class="card-text">Berikut ini adalah kelas-kelas yang masuk ke dalam list keranjang Anda.</p>
                 </div>
+
+                <?php if(count($items) != 0){ ?>
+
                 <hr>
                 <div class="card-body">
                     <div class="form-check">
@@ -41,10 +44,10 @@
                     </div>
                 </div>
 
-                <?php if(count($items) != 0){ ?>
                 <?php echo form_open('User/update'); ?>
 
                 <?php foreach($items as $data) { ?>
+
                 <div class="card-body">
                     <div class="form-check">
                         <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
