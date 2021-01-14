@@ -6,6 +6,13 @@ class CourseModel2 extends Model {
 
     protected $table = "course";
 
+    protected $primaryKey = "id";
+ 
+    public function getCourse($id)
+    {
+        return $this->db->table($this->table)->where('id', $id)->get()->getRowArray();
+    }
+    
     public function viewCourse($slug = false) {
         if ($slug === false) {
             return $this->table($this->table)

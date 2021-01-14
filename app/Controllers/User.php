@@ -16,7 +16,6 @@ class User extends BaseController
 	{
 		$session = session();
 		$this->user = new UserModel();
-		$this->course = new CourseModel();
         $this->kursus = new CourseModel2();
         $this->cart = new CartModel();
 
@@ -29,9 +28,10 @@ class User extends BaseController
 	public function index()
 	{
         $session = session('cart');
-        $data['total'] = is_array($session)? array_values($session): array();
+		$data['total'] = is_array($session)? array_values($session): array();
         $data['items'] = $this->kursus->findAll();
-        
+		
+		
         $data['course'] = $this->kursus->viewCourse();		
 		$dataUser['user'] = $this->user->getUser();
 		$data['title'] = "Kademy";
@@ -40,8 +40,34 @@ class User extends BaseController
 
 	//fungsi checkout batas atas
 	
-    public function beli($slug = null)
+    public function beli($id = null)
     {
+		// $dataUser = $this->user->getOneUser($id);
+
+		$idUser = session()->get('id');
+		// dd($dataUser);
+		$kursus = $this->kursus->getCourse($id);
+        // cek data product
+        if($kursus != null){ // jika product tidak kosong
+ 
+			
+            // buat variabel array untuk menampung data product
+            $item = [
+                'id'        => $kursus['id'],
+                'name'      => $kursus['name'],
+				'price'     => $kursus['price'],
+				'id_user'	=> $idUser
+            ];
+            // tambahkan product ke dalam cart
+            $this->cart->insertCart($item);
+            // tampilkan nama product yang ditambahkan
+            $kursus = $item['name'];
+            // success flashdata
+            session()->setFlashdata('success', "Berhasil memasukan {$kursus} ke karanjang belanja");
+        } else {
+            // error flashdata
+            session()->setFlashdata('error', "Tidak dapat menemukan data product");
+        }
         return redirect()->to(base_url('/')); 
     }
  

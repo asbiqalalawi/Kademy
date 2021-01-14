@@ -20,5 +20,13 @@ class UserModel extends Model{
                         ->getRowArray();
         }
     }
+
+    public function getOneUser($id = false){
+        if ($id === false) {
+            return $this->table('user')
+                        ->get()
+                        ->getRowArray();
+        }
+    }
 }
 ?>

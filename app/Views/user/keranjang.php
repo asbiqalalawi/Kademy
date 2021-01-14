@@ -46,7 +46,7 @@
 
                 <?php echo form_open('User/update'); ?>
 
-                <?php foreach($items as $data) { ?>
+                <?php foreach($items as $key => $item) { ?>
 
                 <div class="card-body">
                     <div class="form-check">
@@ -56,8 +56,8 @@
                                 <img src="/img/danial-unsplash.jpg" width="100%">
                             </div>
                             <div class="col">
-                                <h5 class="card-text"><?= $data['name']; ?></h5>
-                                <h6 class="hrg">Rp. <?php echo number_format($kursus['price'], 0, 0, '.'); ?></h6>
+                                <h5 class="card-text"><?= $item['name']; ?></h5>
+                                <h6 class="hrg">Rp. <?php echo number_format($item['price'], 0, 0, '.'); ?></h6>
                                 <div class="btn-group">
                                     <button type="submit" class="btn btn-primary btn-sm"><i
                                             class="fa fa-edit"></i></button>
@@ -76,8 +76,7 @@
                 <?php } ?>
 
                 <?php if(count($items) == 0){ // jika cart kosong, maka tampilkan: ?>
-                Keranjang belanja Anda sedang kosong. <a href="<?php echo base_url('product'); ?>"
-                    class="btn btn-success">Belanja Yuk</a>
+                Keranjang belanja Anda sedang kosong.
                 <?php } else { // jika cart tidak kosong, tampilkan: ?>
                 <a href="<?php echo base_url('/'); ?>" class="btn btn-success">Lanjut Belanja</a>
                 <?php } ?>
