@@ -21,8 +21,9 @@ class Payment extends Migration
 				'type'           => 'VARCHAR',
 				'constraint'     => 255,
 			],
-			'time' => [
-				'type'           => 'DATE',
+			'id_user' => [
+				'type'           => 'VARCHAR',
+				'constraint'     => 255,
 			],
 			'nominal'      => [
 				'type'           => 'INT',

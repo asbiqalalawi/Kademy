@@ -83,7 +83,7 @@
                         <h5 class="card-title"><?php echo $data['name']; ?></h5>
                         <h6 class="hrg">Rp. <?php echo number_format($data['price'], 0, 0, '.'); ?></h6>
                         <p class="card-text"><?php echo $data['description']; ?></p>
-                        <a href="<?= base_url('User/beli/'.$data['id']) ?>" class="btn">Lihat Kelas</a>
+                        <a href="<?= base_url('User/detail/'.$data['slug']) ?>" class="btn">Lihat Kelas</a>
 
                     </div>
                 </div>

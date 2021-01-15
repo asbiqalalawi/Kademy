@@ -21,18 +21,21 @@
                     <form>
                         <div class="form-group">
                             <small for="exampleInputEmail1">Nama Rekening</small>
-                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">
+                            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                                placeholder="" name="nama">
                         </div>
                         <div class="form-group">
                             <small for="exampleInputEmail1">Nomor Rekening</small>
-                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                                name="nomor">
                         </div>
                         <div class="form-group">
                             <small for="exampleInputPassword1">Password</small>
                             <input type="password" class="form-control" id="exampleInputPassword1">
                         </div>
                         <div class="text-right">
-                            <button type="submit" class="btn">Bayar</button>
+
+                            <a href="/user/payment/" class="btn">Bayar</a>
                         </div>
                     </form>
                 </div>

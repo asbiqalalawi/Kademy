@@ -32,8 +32,6 @@
                     <p class="card-text">Berikut ini adalah kelas-kelas yang masuk ke dalam list keranjang Anda.</p>
                 </div>
 
-                <?php if(count($items) != 0){ ?>
-
                 <hr>
                 <div class="card-body">
                     <div class="form-check">
@@ -46,40 +44,45 @@
 
                 <?php echo form_open('User/update'); ?>
 
-                <?php foreach($items as $key => $item) { ?>
+                <?php $i = 0;  ?>
+
+                <?php foreach($cart as $data) { 
+                    
+                    if($data['id_user'] == session()->get('id') ){ ?>
+
 
                 <div class="card-body">
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                        <input class="form-check-input" type="checkbox" value=<?= $data['price']; ?> id=<?= $i; ?>>
                         <div class="row">
                             <div class="col-2">
                                 <img src="/img/danial-unsplash.jpg" width="100%">
                             </div>
                             <div class="col">
-                                <h5 class="card-text"><?= $item['name']; ?></h5>
-                                <h6 class="hrg">Rp. <?php echo number_format($item['price'], 0, 0, '.'); ?></h6>
+                                <h5 class="card-text"><?= $data['name']; ?></h5>
+                                <h6 class="hrg">Rp. <?php echo number_format($data['price'], 0, 0, '.'); ?></h6>
                                 <div class="btn-group">
-                                    <button type="submit" class="btn btn-primary btn-sm"><i
-                                            class="fa fa-edit"></i></button>
                                     <a href="<?php echo base_url('User/remove/'.$data['id']); ?>"
                                         class="btn btn-danger btn-sm"
                                         onclick="return confirm('Apakah Anda yakin ingin menghapus product ini dari keranjang belanja?')"><i
                                             class="fa fa-trash"></i></a>
                                 </div>
+
+                                <div class="btn-group">
+                                    <a href="/bayar/<?php $id;?>" class="btn btn-danger btn-sm"><i
+                                            class="btn"></i>Bayar</a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <?php } ?>
+                <?php $i ++;}
+             } ?>
 
                 <?php echo form_close(); ?>
-                <?php } ?>
 
-                <?php if(count($items) == 0){ // jika cart kosong, maka tampilkan: ?>
-                Keranjang belanja Anda sedang kosong.
-                <?php } else { // jika cart tidak kosong, tampilkan: ?>
                 <a href="<?php echo base_url('/'); ?>" class="btn btn-success">Lanjut Belanja</a>
-                <?php } ?>
+
 
             </div>
         </div>
