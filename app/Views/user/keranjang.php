@@ -68,8 +68,8 @@
                                     </div>
 
                                     <div class="btn-group">
-                                        <a href="/bayar/<?php $id;?>" class="btn btn-danger btn-sm"><i
-                                                class="btn"></i>Bayar</a>
+                                        <a href="<?= base_url('User/bayar/'.$data['slug']) ?>"
+                                            class="btn btn-danger btn-sm"><i class="btn"></i>Bayar</a>
                                     </div>
                                 </div>
                             </div>

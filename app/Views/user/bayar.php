@@ -18,7 +18,7 @@
                     <div class="text-right">
                         <small class="txt">Total : Rp 600.000</small>
                     </div>
-                    <form>
+                    <form action="<?php echo base_url('User/payment'); ?>" method="post">
                         <div class="form-group">
                             <small for="exampleInputEmail1">Nama Rekening</small>
                             <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
@@ -33,9 +33,12 @@
                             <small for="exampleInputPassword1">Password</small>
                             <input type="password" class="form-control" id="exampleInputPassword1">
                         </div>
+                        <?php 
+                            
+                        
+                        ?>
                         <div class="text-right">
-
-                            <a href="/user/payment/" class="btn">Bayar</a>
+                            <button type="submit" class="btn">Bayar</button>
                         </div>
                     </form>
                 </div>

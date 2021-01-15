@@ -116,46 +116,44 @@ class User extends BaseController
 		return view('user/kelas', $data);
 	}
 
-	public function bayar($id = null)
+	public function bayar($slug = null)
 	{
 		$data['userId'] = session()->get('id');
-		$data['cart'] = $this->cart->getOneCart($id);
+		$data['cart'] = $this->cart->getCart($slug);
 		$data['title'] = "Pembayaran | Kademy";
-		return view('user/bayar', $data);
+		return view('user/bayar', compact('data'));
 	}
 
-	public function payment($id = null){
-
-		/* $idCourse = $this->cart->getOneCart */
-		$idUser = session()->get('id');
-		$data = $this->cart->getCart();
-
-		$test = $data;
-
-		// dd($test);
-		// dd($data['id_user']);
-		// dd($idUser);
-		// foreach($data as $ddata) {
-		// 	dd($ddata);
-		// 	if ($ddata['id_user'] == $idUser) {
-		/* 		$item = [
-					'no_rekening'	=> $this->request->getVar('nama'),
-					'nama_rekening'	=> $this->request->getVar('nomor'),
-					'id_user'		=> $idUser,
-					'nominal'		=> $data['price'],
-					'course_id'		=> $data['id']
-				];
-		// }
-		dd($item); */
-		/* $bayar = $this->payment->insertPayment($item);
+	public function payment(){
 		
-		if($bayar) {
+		$nama = $this->request->getPost('nama');
+		$nomor = $this->request->getPost('nomor');
+		$idUser = session()->get('id');
 
-			$cart = new CartModel();
-			   $cart->deleteCart($id);
-			   
-			// } 
-		} */
-		return redirect()->to('/keranjang');
+		
+		// Membuat array collection yang disiapkan untuk insert ke table
+		$data = [
+			'no_rekening' 	=> $nomor,
+			'nama_rekening' => $nama,
+			'id_user'		=> $idUser,
+			/* 'nominal'		=> $getCart['price'],
+			'judul'			=> $getCart['name'] */
+		];
+	 
+		/* 
+		Membuat variabel simpan yang isinya merupakan memanggil function 
+		insert_product dan membawa parameter data 
+		*/
+		$simpan = $this->payment->insertPayment($data);
+	 
+		// Jika simpan berhasil, maka ...
+		if($simpan)
+		{
+			// Deklarasikan session flashdata dengan tipe success
+			session()->setFlashdata('success', 'Created product successfully');
+			// Redirect halaman ke product
+			return redirect()->to('/keranjang');
+		}
+		
 	}
 }

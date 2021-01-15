@@ -7,15 +7,15 @@ class CartModel extends Model {
     protected $table = "cart";
     protected $primaryKey = 'id';
     
-    protected $allowedFields = ['name','price','id_user'];
-    public function getCart($id = false) {
-        if ($id === false) {
-            return $this->table('cart')
+    protected $allowedFields = ['name','price','id_user', 'slug'];
+    public function getCart($slug = false) {
+        if ($slug === false) {
+            return $this->table($this->table)
                         ->get()
                         ->getResultArray();
         } else {
-            return $this->table('cart')
-                        ->where('cart', $id)
+            return $this->table($this->table)
+                        ->where('slug', $slug)
                         ->get()
                         ->getRowArray();
         }

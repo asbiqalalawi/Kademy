@@ -30,16 +30,19 @@
                         <tbody>
                             <?php $no = 1;
                             foreach ($getUser as $u) { ?>
-                                <tr>
-                                    <th scope="row"><?= $no; ?></th>
-                                    <td><?= $u['nama']; ?></td>
-                                    <td><?= $u['email']; ?></td>
-                                    <td>
-                                        <a href="<?= base_url('admin/edituser/' . $u['id']); ?>" class="btn btn-success">edit</a>
-                                        <a href="<?= base_url('admin/hapusus/' . $u['id']); ?>" onclick="javascript:return confirm('Apakah ingin menghapus data user ?')" class="btn btn-danger">
-                                            Hapus</a>
-                                    </td>
-                                </tr>
+                            <tr>
+                                <th scope="row"><?= $no; ?></th>
+                                <td><?= $u['nama']; ?></td>
+                                <td><?= $u['email']; ?></td>
+                                <td>
+                                    <a href="<?= base_url('admin/edituser/' . $u['id']); ?>"
+                                        class="btn btn-success">edit</a>
+                                    <a href="<?= base_url('admin/hapusus/' . $u['id']); ?>"
+                                        onclick="javascript:return confirm('Apakah ingin menghapus data user ?')"
+                                        class="btn btn-danger">
+                                        Hapus</a>
+                                </td>
+                            </tr>
                             <?php $no++;
                             } ?>
                         </tbody>

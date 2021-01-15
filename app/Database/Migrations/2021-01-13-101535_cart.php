@@ -25,6 +25,10 @@ class Cart extends Migration
 				'type'           => 'INT',
 				'constraint'     => '10'
 			],
+			'slug'       => [
+				'type'           => 'VARCHAR',
+				'constraint'     => '255'
+			],
 		]);
 
 		// Membuat primary key
