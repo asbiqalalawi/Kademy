@@ -36,6 +36,9 @@ $routes->get('admin', 'Admin::index');
 $routes->get('/tambahmateri', 'Admin::tambahmateri');
 $routes->get('/lihatmateri', 'Admin::lihatmateri');
 $routes->get('/editmateri', 'Admin::editmateri');
+$routes->get('/edituser', 'Admin::edituser');
+$routes->get('/tambahuser', 'Admin::tambahuser');
+$routes->get('/lihatuser', 'Admin::lihatuser');
 
 $routes->get('/detail', 'User::detail');
 $routes->get('/dashboard', 'User::dashboard');

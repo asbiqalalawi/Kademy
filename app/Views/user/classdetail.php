@@ -2,14 +2,14 @@
 
 <?= $this->section('style'); ?>
 <style>
-.jumbotron {
-    background-image: url(/svg/undraw_researching_22gp.svg);
-    background-size: cover;
-}
+    .jumbotron {
+        background-image: url(/svg/undraw_researching_22gp.svg);
+        background-size: cover;
+    }
 
-img {
-    border-radius: 5%;
-}
+    img {
+        border-radius: 5%;
+    }
 </style>
 <?= $this->endSection(); ?>
 
@@ -45,8 +45,7 @@ img {
             </div>
             <p>Daftar sekarang untuk dapat mengikuti pembelajaran</p>
 
-            <a href="<?php echo base_url('User/beli/'.$kursus['id']); ?>" class="btn mb-2"
-                style="width: 100%;">Tambahkan ke Keranjang</a>
+            <a href="<?php echo base_url('User/beli/' . $kursus['id']); ?>" class="btn mb-2" style="width: 100%;">Tambahkan ke Keranjang</a>
 
             <!-- <div class="text-center">
                 <?php if (session()->get('logged_in')) : ?>
@@ -59,18 +58,5 @@ img {
         </div>
     </div>
 </div>
-
-
-<div class="footer">
-    <hr>
-    <footer class="text-center">
-        <div class="container">
-            <div class="row">
-                <p>Copyright © 2020 - Kademy. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
-</div>
-
 
 <?= $this->endSection(); ?>

@@ -4,14 +4,11 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class UserModel extends Model
+class MateriModel extends Model
 {
-    protected $table = 'user';
-    protected $primaryKey = 'id';
+    protected $table = 'lesson';
 
-    protected $allowedFields = ['nama', 'email', 'role_id', 'password'];
-
-    public function getUser($id = false)
+    public function getMateri($id = false)
     {
         if ($id === false) {
             return $this->findAll();
@@ -19,29 +16,19 @@ class UserModel extends Model
             return $this->getWhere(['id' => $id]);
         }
     }
-
-    public function getOneUser($id = false)
-    {
-        if ($id === false) {
-            return $this->table('user')
-                ->get()
-                ->getRowArray();
-        }
-    }
-    public function saveUser($data)
+    public function saveMateri($data)
     {
         $builder = $this->db->table($this->table);
         return $builder->insert($data);
     }
 
-    public function editUser($data, $id)
+    public function editMateri($data, $id)
     {
-
         $builder = $this->db->table($this->table);
         $builder->where('id', $id);
         return $builder->update($data);
     }
-    public function hapusUser($id)
+    public function hapusMateri($id)
     {
         $builder = $this->db->table($this->table);
         return $builder->delete(['id' => $id]);
