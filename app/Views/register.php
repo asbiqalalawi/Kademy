@@ -17,16 +17,23 @@
             <div class="card bg-light mb-3 mx-auto shadow" style="max-width: 400px;">
                 <div class="card-body">
                     <?php if (isset($validation)) : ?>
-                        <div class="alert alert-danger"><?= $validation->listErrors() ?></div>
+                    <div class="alert alert-danger"><?= $validation->listErrors() ?></div>
                     <?php endif; ?>
                     <form class="m-3" action="/register/save" method="POST">
                         <div class="text-center mb-4">
                             <h4>Daftar Sekarang</h4>
-                            <small class="form-text text-muted">Sudah punya akun Kademy? <a href="/login" class="txt">Masuk</a></small>
+                            <small class="form-text text-muted">Sudah punya akun Kademy? <a href="/login"
+                                    class="txt">Masuk</a></small>
+                        </div>
+                        <div class="form-group">
+                            <small id="nameHelp" class="form-text text-muted">Nama</small>
+                            <input type="text" class="form-control" id="nama" name="nama" aria-describedby="nameHelp">
+                            <small id="nameHelp" class="form-text text-muted"></small>
                         </div>
                         <div class="form-group">
                             <small id="emailHelp" class="form-text text-muted">Email</small>
-                            <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp">
+                            <input type="email" class="form-control" id="email" name="email"
+                                aria-describedby="emailHelp">
                             <small id="emailHelp" class="form-text text-muted">Contoh : email@kademy.com</small>
                         </div>
                         <div class="form-group">

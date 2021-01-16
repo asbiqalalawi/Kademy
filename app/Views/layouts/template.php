@@ -18,7 +18,7 @@
 
     <?= $this->renderSection('style'); ?>
 
-    <title></title>
+    <title>Kademy</title>
 
 </head>
 
@@ -64,7 +64,8 @@
             </a>
             <div class="dropdown">
                 <a class="navbar-brand dropdown-toggle" href="#" style="font-size: 90%;" id="dropdownMenuLink"
-                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Hii, Asbiq Al Alawi</a>
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Hi,
+                    <?= $nama; ?></a>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                     <a class="dropdown-item" href="/logout">Keluar</a>
                 </div>

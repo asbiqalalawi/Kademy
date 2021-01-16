@@ -35,7 +35,8 @@ class Login extends BaseController
                     'id'          => $dataUser['id'],
                     'email'       => $dataUser['email'],
                     'role_id'     => $dataUser['role_id'],
-                    'logged_in'   => true
+                    'logged_in'   => true,
+                    'nama'        => $dataUser['nama']
                 ];
                     if ($dataUser['role_id'] == '1') {
                         $session->set($data_session);

@@ -9,7 +9,6 @@ use App\Models\CourseModel2;
 use App\Models\PaymentModel;
 use App\Models\UserModel;
 use CodeIgniter\Controllers;
-use Wildanfuady\WFcart\WFcart;
 
 
 class User extends BaseController
@@ -17,19 +16,16 @@ class User extends BaseController
 	public function __construct()
 	{
 		$session = session();
+		
 		$this->user = new UserModel();
         $this->kursus = new CourseModel2();
         $this->cart = new CartModel();
         $this->payment = new PaymentModel();
 
-		// membuat variabel untuk menampung class WFcart
-        $this->keranjang = new WFcart();
-        // memanggil form helper
-        helper('form');
-
 	}
 	public function index()
 	{
+		$data['nama'] = session()->get('nama');
         $session = session('cart');
 		$data['total'] = is_array($session)? array_values($session): array();
         $data['items'] = $this->kursus->findAll();
@@ -45,6 +41,7 @@ class User extends BaseController
 	
     public function beli($id = null)
     {
+		$data['nama'] = session()->get('nama');
 		// $dataUser = $this->user->getOneUser($id);
 
 		$idUser = session()->get('id');
@@ -76,6 +73,7 @@ class User extends BaseController
     // function untuk menghapus cart berdasarkan id
     public function remove($id = null)
     {
+		$data['nama'] = session()->get('nama');
         $cart = new CartModel();
         $cart->deleteCart($id);
         return redirect()->to('/keranjang');
@@ -85,7 +83,7 @@ class User extends BaseController
 
 	public function detail($slug = null)
 	{
-		
+		$data['nama'] = session()->get('nama');
 		$data['kursus'] = $this->kursus->viewCourse($slug);	
 		$data['title'] = "Detail Kelas | Kademy"; //Nama kelas
 		if(empty($data['kursus'])) {
@@ -97,12 +95,14 @@ class User extends BaseController
 
 	public function dashboard()
 	{
+		$data['nama'] = session()->get('nama');
 		$data['title'] = "Kademy";
 		return view('user/dashboard', $data);
 	}
 
 	public function keranjang()
 	{
+		$data['nama'] = session()->get('nama');
         $data['userId'] = session()->get('id');
         $data['user'] = $this->user->getUser();
         $data['cart'] = $this->cart->getCart();
@@ -112,20 +112,22 @@ class User extends BaseController
 
 	public function kelas()
 	{
+		$data['nama'] = session()->get('nama');
 		$data['title'] = "Nama Kelas | Kademy";
 		return view('user/kelas', $data);
 	}
 
 	public function bayar($slug = null)
 	{
+		$data['nama'] = session()->get('nama');
 		$data['userId'] = session()->get('id');
 		$data['cart'] = $this->cart->getCart($slug);
 		$data['title'] = "Pembayaran | Kademy";
-		return view('user/bayar', compact('data'));
+		return view('user/bayar', $data);
 	}
 
 	public function payment(){
-		
+		$data['nama'] = session()->get('nama');
 		$nama = $this->request->getPost('nama');
 		$nomor = $this->request->getPost('nomor');
 		$idUser = session()->get('id');

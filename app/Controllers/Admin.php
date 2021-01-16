@@ -125,7 +125,7 @@ class Admin extends BaseController
             'nama' => $this->request->getPost('nama'),
             'email'         => $this->request->getPost('email'),
             'role_id'  => $this->request->getPost('roleid'),
-            'password'  => $this->request->getPost('password'),
+            'password'  => password_hash($this->request->getVar('password'), PASSWORD_DEFAULT)
         );
         $model->saveUser($data);
         echo '<script>

@@ -9,7 +9,8 @@ class Register extends BaseController
 {
 
     public function __construct()
-    {
+    {       
+        $data['title'] = "Daftar | Kademy";
         helper('form');
         $this->form_validation = \Config\Services::validation();
     }
@@ -17,13 +18,14 @@ class Register extends BaseController
     public function index()
     {
         $data['title'] = "Daftar | Kademy";
-        $dataUser = [];
-        return view('register', $data, $dataUser);
+        return view('register', $data);
     }
 
     public function save()
     {
+        $data['title'] = "Daftar | Kademy";
         $rules = [
+            'nama'         => 'required|trim',
             'email'         => 'required|trim|is_unique[user.email]',
             'password'      => 'required|min_length[3]|max_length[20]',
             'confirm_password'  => 'required|matches[password]'
@@ -31,12 +33,13 @@ class Register extends BaseController
 
         if ($this->validate($rules)) {
             $model = new UserModel();
-            $dataUser = [
+            $data = [
+                'nama'     => $this->request->getVar('nama'),
                 'email'     => $this->request->getVar('email'),
                 'role_id'     => '1',
                 'password'  => password_hash($this->request->getVar('password'), PASSWORD_DEFAULT)
             ];
-            $model->save($dataUser);
+            $model->save($data);
             return redirect()->to('/login');
         } else {
             $dataUser['validation'] = $this->validator;

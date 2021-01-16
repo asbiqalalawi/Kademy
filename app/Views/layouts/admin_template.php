@@ -17,7 +17,8 @@
     <link rel="stylesheet" href="/assets/src/assets/css/demo_1/style.css">
     <!-- Layout style -->
     <link rel="shortcut icon" href="/assets/src/assets/images/favicon.ico" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 </head>
 
 <body class="header-fixed">
@@ -38,16 +39,19 @@
                 </button>
                 <form action="#" class="t-header-search-box">
                     <div class="input-group">
-                        <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Search" autocomplete="off">
+                        <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Search"
+                            autocomplete="off">
                         <button class="btn btn-primary" type="submit"><i class="mdi mdi-arrow-right-thick"></i></button>
                     </div>
                 </form>
                 <ul class="nav ml-auto">
                     <li class="nav-item dropdown">
-                        <a class="nav-link" href="#" id="notificationDropdown" data-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link" href="#" id="notificationDropdown" data-toggle="dropdown"
+                            aria-expanded="false">
                             <i class="mdi mdi-bell-outline mdi-1x"></i>
                         </a>
-                        <div class="dropdown-menu navbar-dropdown dropdown-menu-right" aria-labelledby="notificationDropdown">
+                        <div class="dropdown-menu navbar-dropdown dropdown-menu-right"
+                            aria-labelledby="notificationDropdown">
                             <div class="dropdown-header">
                                 <h6 class="dropdown-title">Notifications</h6>
                                 <p class="dropdown-title-text">You have 4 unread notification</p>
@@ -90,9 +94,11 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link" href="#" id="messageDropdown" data-toggle="dropdown" aria-expanded="false">
                             <i class="mdi mdi-message-outline mdi-1x"></i>
-                            <span class="notification-indicator notification-indicator-primary notification-indicator-ripple"></span>
+                            <span
+                                class="notification-indicator notification-indicator-primary notification-indicator-ripple"></span>
                         </a>
-                        <div class="dropdown-menu navbar-dropdown dropdown-menu-right" aria-labelledby="messageDropdown">
+                        <div class="dropdown-menu navbar-dropdown dropdown-menu-right"
+                            aria-labelledby="messageDropdown">
                             <div class="dropdown-header">
                                 <h6 class="dropdown-title">Messages</h6>
                                 <p class="dropdown-title-text">You have 4 unread messages</p>
@@ -100,7 +106,8 @@
                             <div class="dropdown-body">
                                 <div class="dropdown-list">
                                     <div class="image-wrapper">
-                                        <img class="profile-img" src="assets/src/assets/images/profile/male/image_1.png" alt="profile image">
+                                        <img class="profile-img" src="assets/src/assets/images/profile/male/image_1.png"
+                                            alt="profile image">
                                         <div class="status-indicator rounded-indicator bg-success"></div>
                                     </div>
                                     <div class="content-wrapper">
@@ -110,7 +117,9 @@
                                 </div>
                                 <div class="dropdown-list">
                                     <div class="image-wrapper">
-                                        <img class="profile-img" src="assets/src/assets/images/profile/female/image_2.png" alt="profile image">
+                                        <img class="profile-img"
+                                            src="assets/src/assets/images/profile/female/image_2.png"
+                                            alt="profile image">
                                         <div class="status-indicator rounded-indicator bg-success"></div>
                                     </div>
                                     <div class="content-wrapper">
@@ -120,7 +129,8 @@
                                 </div>
                                 <div class="dropdown-list">
                                     <div class="image-wrapper">
-                                        <img class="profile-img" src="assets/src/assets/images/profile/male/image_3.png" alt="profile image">
+                                        <img class="profile-img" src="assets/src/assets/images/profile/male/image_3.png"
+                                            alt="profile image">
                                         <div class="status-indicator rounded-indicator bg-warning"></div>
                                     </div>
                                     <div class="content-wrapper">
@@ -176,7 +186,8 @@
         <div class="sidebar">
             <div class="user-profile">
                 <div class="display-avatar animated-avatar">
-                    <img class="profile-img img-lg rounded-circle" src="assets/src/assets/images/profile/male/image_1.png" alt="profile image">
+                    <img class="profile-img img-lg rounded-circle"
+                        src="assets/src/assets/images/profile/male/image_1.png" alt="profile image">
                 </div>
                 <div class="info-wrapper">
                     <p class="user-name">Allen Clerk</p>
